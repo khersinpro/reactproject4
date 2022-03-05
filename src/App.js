@@ -18,7 +18,7 @@ function App() {
     <Fragment>
         <BrowserRouter>
           <Routes>
-            <Route path="/reactproject4/home" 
+            <Route path="/reactproject4/" 
               element={<Home 
                 openBurger={openBurger} 
                 burger={burger} 

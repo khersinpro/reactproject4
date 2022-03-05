@@ -17,7 +17,7 @@ const HomeNav = ({openBurger, burger}) => {
             </div>
             <div className={`linkContainer ${!burger && "openOrClose"}`}>
                 <div className='navContainer home'>
-                    <Link to="/reactproject4/home">HOME</Link>
+                    <Link to="/reactproject4/">HOME</Link>
                 </div>
 
                 <div className='navContainer'>

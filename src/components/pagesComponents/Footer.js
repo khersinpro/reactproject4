@@ -14,7 +14,7 @@ const Footer = () => {
                     <img src={logo} alt="logo" />
                 </div>
                 <div className='footerBox__nav--nav'>
-                    <Link to='/reactproject4/home'>HOME</Link>
+                    <Link to='/reactproject4/'>HOME</Link>
                     <Link to='/reactproject4/headphones'>HEADPHONES</Link>
                     <Link to='/reactproject4/speakers'>SPEAKERS</Link>
                     <Link to='/reactproject4/earphones'>EARPHONES</Link>
