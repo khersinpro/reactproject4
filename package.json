@@ -2,7 +2,7 @@
   "name": "audiophile",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://khersinpro.github.io/reactproject4",
+  "homepage": "https://khersinpro.github.io/reactproject4/home",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",

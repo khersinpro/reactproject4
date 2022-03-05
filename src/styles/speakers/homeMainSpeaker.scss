@@ -1,0 +1,34 @@
+.speakBg1{
+    background: url('../../images/product-zx9-speaker/desktop/image-category-page-preview.jpg');
+    background-size: 100%;
+    @media(max-width: 1150px) {
+        background: url('../../images/product-zx9-speaker/tablet/image-category-page-preview.jpg');
+        background-size: 100%;
+    }
+    @media(max-width: 730px) {
+        background: url('../../images/product-zx9-speaker/mobile/image-category-page-preview.jpg');
+        background-size: 100%;
+        
+    }
+}
+.speakBg2{
+    background: url('../../images/product-zx7-speaker/desktop/image-category-page-preview.jpg');
+    background-size: 100%;
+    @media(max-width: 1150px) {
+        background: url('../../images/product-zx7-speaker/tablet/image-category-page-preview.jpg');
+        background-size: 100%;
+    }
+    @media(max-width: 730px) {
+        background: url('../../images/product-zx7-speaker/mobile/image-category-page-preview.jpg');
+        background-size: 100%;
+    }
+}
+.speakBg3{
+
+    @media(max-width: 1150px) {
+        
+    }
+    @media(max-width: 730px) {
+        
+    }   
+}

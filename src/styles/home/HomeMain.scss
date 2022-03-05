@@ -1,0 +1,452 @@
+main{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media(max-width:1150px) {
+        
+    }
+    @media(max-width: 830px){
+
+    }
+    @media(max-width: 600px){
+
+    }
+}
+
+.mainNav{
+    width:1110px ;
+    display: flex;
+    justify-content: space-between;
+    margin: 200px 0 168px;
+    @media(max-width:1150px) {
+        width: 689px;
+        margin: 148px 0 96px;
+    }
+    @media(max-width: 730px){
+        width: 327px;
+        flex-direction: column;
+        height: 630px;
+        margin: 92px 0 80px;
+    }
+    &__box{
+        width: 350px;
+        height: 204px;  
+        background: $color3;
+        border-radius: 8px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.10);
+        @media(max-width:1150px) {
+            width: 223px;
+            height: 165px;
+        }
+        @media(max-width: 730px){
+            width: 327px;
+            height: 165px;
+        }
+        .headphonesImg{
+            height:160px ;
+            width:132px ;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -35%);
+            @media(max-width:1150px) {
+                height: 130px;
+                width: 107px;
+            }            
+        }
+        .speakersImg{
+            height:146px ;
+            width:135px ;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -35%);
+            @media(max-width:1150px) {
+                height: 126px;
+                width: 115px;
+            }
+        }
+        .earphonesImg{
+            height:135px ;
+            width: 135px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -35%);
+            @media(max-width:1150px) {
+                height: 115px;
+                width: 115px;
+            }
+        }
+        a{
+            margin: 116px 0 0;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            letter-spacing: 1.28571px;
+            color: black;
+            @media(max-width:1150px) {
+                margin: 88px 0 0;
+                font-size: 15px;
+                letter-spacing: 1;
+            }
+        }
+        &--anchorBox{
+            margin: 15px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span{
+                font-weight: bold;
+                font-size: 13px;
+                letter-spacing: 1px;
+                color: rgba(0, 0, 0, 0.50);
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.firstBox{
+    width: 1110px;
+    height: 560px;
+    background: url('../../images/home/desktop/pattern-circles.svg') no-repeat;
+    background-position: -85% 10%;
+    background-color: $color1;
+    border-radius: 8px;
+    margin-bottom: 48px;
+    display: flex;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.10);
+    @media(max-width:1150px) {
+        width: 689px;
+        height: 720px;
+        flex-direction: column;
+        background-position: 50% 130%;
+    }
+    @media(max-width: 730px){
+        width: 327px;
+        height: 600px;   
+        background-size: 170%;
+        background-position: 50% -270%;
+        margin-bottom: 24px;
+    }
+    &__left{
+        width: 50%;
+        overflow: hidden;
+        position: relative;
+        @media(max-width:1150px) {
+        width: 100%;
+        height: 50%;
+        }
+        img{
+            width: 410.23px;
+            height: 493px;
+            position: absolute;
+            bottom: -15px;
+            right: 20px;
+            @media(max-width:1150px) {
+                height: 237px;
+                width: 198px;
+                top: 52px;
+                left: 50%;
+                bottom: unset;
+                right: unset;
+                transform: translateX(-50%);
+            }
+            @media(max-width: 730px){
+                height: 207px;
+                width: 172.25px;
+            }
+        }
+    }
+    &__right{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media(max-width:1150px) {
+            width: 100%;
+            text-align: center;
+        }
+        &--text{
+            width: 349px;
+            height: 303px;
+            @media(max-width: 730px){
+                width: 280px;
+            }
+            h2{
+                font-weight: bold;
+                font-size: 56px;
+                line-height: 58px;
+                letter-spacing: 2px;
+                color: $whiteTxt;
+                margin: 0 0 24px;
+                @media(max-width: 730px){
+                    font-size: 36px;
+                    line-height: 40px;
+                    letter-spacing: 1.2px;
+                    padding: 0 10%;
+                }
+            }
+            p{
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 25px;
+                color: $whiteTxt;
+                opacity: 0.75;
+                margin: 0 0 40px;
+                @media(max-width: 730px){
+                    margin: 0 0 24px;
+                }
+            }
+            button{
+                height: 48px;
+                width: 160px;
+                background: black;
+                border: none;
+                color: $whiteTxt;
+                letter-spacing: 1px;
+                font-size: 13px;
+                font-weight: bold;
+                cursor: pointer;
+                &:hover{
+                    background: #4C4C4C;
+                }
+            }
+        }
+    }
+}
+.secondBox{
+    width: 1110px;
+    height: 320px;
+    background: url('../../images/home/desktop/image-speaker-zx7.jpg');
+    margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    @media(max-width:1150px) {
+        width: 689px;
+        height: 320px;   
+        background: url('../../images/home/tablet/image-speaker-zx7.jpg');
+    }
+    @media(max-width: 730px){
+        background: url('../../images/home/mobile/image-speaker-zx7.jpg');
+        height:320px ;
+        width: 327px;
+        background-size: 100%;
+        margin-bottom: 24px;
+    }
+    &__text{
+        margin-left: 95px;
+        width: 208px;
+        height: 118px;
+        @media(max-width: 730px){
+        margin-left: 24px;
+        }
+        h2{
+            margin-bottom: 32px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            font-size: 28px;
+            color: black;
+        }
+        button{
+            background-color: black;
+            color: $whiteTxt;
+            cursor: pointer;
+            border: none;
+            height: 48px;
+            width: 160px;
+            letter-spacing: 1px;
+            font-weight: bold;
+            font-size: 13px;
+            @media(max-width:1150px) {
+                background: transparent;
+                border: black solid 2px;
+                color: #000000;
+            }
+        }
+    }
+}
+.thirdBox{
+    width: 1110px;
+    height:320px;
+    display: flex;
+    margin-bottom: 200px;
+    justify-content: space-between;
+    @media(max-width:1150px) {
+        width:689px;   
+    }
+    @media(max-width: 730px){
+        width: 327px;
+        flex-direction: column;
+        height: 424px;
+        margin-bottom: 120px;
+    }
+    &__left{
+        height: 320px;
+        width: 540px;
+        border-radius: 8px;
+        background:  url('../../images/home/desktop/image-earphones-yx1.jpg');
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.10);
+        @media(max-width:1150px) {
+            height: 320px;
+            width: 339px;
+            background:  url('../../images/home/tablet/image-earphones-yx1.jpg') center;
+            background-size: 100%;
+        }
+        @media(max-width: 730px){
+            background:  url('../../images/home/mobile/image-earphones-yx1.jpg') center;
+            background-size: 100%;
+            height:200px;
+            width: 327px;
+        }
+    }
+    &__right{
+        height: 320px;
+        width: 540px;
+        background: $color3;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.10);
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        @media(max-width:1150px) {
+            height: 320px;
+            width: 339px;
+        }
+        @media(max-width: 730px){
+            height: 200px;
+            width: 327px;
+        }
+        &--box{
+            border-radius: 8px;
+            margin-left: 95px;
+            @media(max-width:1150px) {
+                margin-left: 41px;
+            }
+            h2{
+                margin-bottom: 32px;
+                letter-spacing: 2px;
+                font-weight: bold;
+                font-size: 28px;
+                color: black;
+            }
+            button{
+                background-color: black;
+                color: $whiteTxt;
+                cursor: pointer;
+                border: none;
+                height: 48px;
+                width: 160px;
+                letter-spacing: 1px;
+                font-weight: bold;
+                font-size: 13px;
+                @media(max-width:1150px) {
+                    background: transparent;
+                    border: black solid 2px;
+                    color: #000000;
+        
+                }
+            }
+        }
+    }
+}
+.fourthBox{
+    width: 1110px;
+    height: 588px;
+    margin-bottom: 200px;
+    display: flex;
+    @media(max-width:1150px) {
+     flex-direction: column-reverse;   
+     width: 689px;
+     margin-bottom: 96px;
+    }
+    @media(max-width: 730px){
+        width: 327px;
+        height: 698px;
+        justify-content: start;
+    }
+    &__left{
+        height: 100%;
+        width: 570px;
+        display: flex;
+        align-items: center;
+        @media(max-width:1150px) {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            justify-content: center;
+            margin-top: 63px;
+        }
+        @media(max-width: 730px){
+            width: 327px;
+            margin-top:40px ;
+        }
+        &--text{
+            height: 295px;
+            width: 445px;
+            @media(max-width:1150px) {
+                width: 573px;
+                height: 270px;
+            }
+            @media(max-width: 730px){
+                width: 327px;
+                height: auto;
+            }
+            h2{
+                font-weight: bold;
+                font-size: 40px;
+                line-height: 44px;
+                letter-spacing: 1.42857px;
+                text-transform: uppercase; 
+                color: #000000;    
+                margin-bottom: 32px; 
+                @media(max-width: 730px){
+                    font-size: 28px;
+                    line-height: 38px;
+                    letter-spacing: 1px;
+                    
+                } 
+                span{
+                    color: $color1;
+                }          
+            }
+            p{
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 25px;  
+                color: #000000;
+                opacity: 0.5;   
+                @media(max-width: 730px){
+        
+                }             
+            }
+        }
+    }
+    &__right{
+        height: 100%;
+        width: 540px;
+        border-radius: 8px;
+        background: url(../../images/shared/desktop/image-best-gear.jpg);
+        @media(max-width:1150px) {
+            width: 100%;
+            height: 300px;
+            background: url(../../images/shared/tablet/image-best-gear.jpg) center;
+            background-size: 100%;
+        }
+        @media(max-width: 730px){
+            background: url(../../images/shared/mobile/image-best-gear.jpg) center;
+            background-size: 100%;
+            width: 327px;
+            height: 300px;
+
+        }
+    }
+}
