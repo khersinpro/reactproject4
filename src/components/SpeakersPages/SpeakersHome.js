@@ -21,7 +21,7 @@ const SpeakersHome = () => {
               connectivity -- creating new possibilities for more pleasing and
               practical audio setups.
             </p>
-            <button>SEE PRODUCT</button>
+            <button><Link to='/reactproject4/speakers/zx9'>SEE PRODUCT</Link></button>
           </div>
         </div>
       </div>
@@ -37,7 +37,7 @@ const SpeakersHome = () => {
               represents the top of the line powered speakers for home or studio
               use.
             </p>
-            <button>SEE PRODUCT</button>
+            <button><Link to='/reactproject4/speakers/zx7'>SEE PRODUCT</Link></button>
           </div>
         </div>
       </div>

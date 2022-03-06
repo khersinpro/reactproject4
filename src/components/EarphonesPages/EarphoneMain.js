@@ -19,7 +19,7 @@ const EarphoneMain = () => {
               sound even in noisy environments with its active noise
               cancellation feature.
             </p>
-            <button>SEE PRODUCT</button>
+            <button><Link to='/reactproject4/earphones/yx1'>SEE PRODUCT</Link></button>
           </div>
         </div>
       </div>

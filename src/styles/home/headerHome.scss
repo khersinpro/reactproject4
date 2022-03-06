@@ -269,3 +269,18 @@ nav{
         }
     }
 }
+.articleNav{
+    background-color: black;
+    height: 97px;
+    display: flex;
+    padding: 0 9%;
+    @media(max-width: 1100px) {
+        padding: 0 3%;
+    }
+    @media(max-width: 830px) {
+        padding: 0 5%;
+    }
+    @media(max-width: 600px) {
+        padding: 0 3%;
+    }
+}

@@ -5,6 +5,10 @@
 @import "./headphones/headphonesMain.scss";
 @import "./speakers/homeMainSpeaker.scss";
 @import "./earphones/homeMainEarphones.scss";
+@import "./articleStyle.scss";
+@import './headphones/artcilesHeadphones.scss';
+@import './speakers/articlesSpeakers.scss';
+@import './earphones/articlesEarphones.scss';
 
 *{
     box-sizing: border-box;
@@ -21,7 +25,10 @@ body{
     width: 100%;
     height: 100%;
     position: relative;
-
 }
+a{
+    text-decoration: none;
+}
+
 
 

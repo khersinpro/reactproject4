@@ -1,0 +1,50 @@
+// ****** ZX9 SPEAKER****** //
+
+.yx1hero{
+    background: url("../../images/product-yx1-earphones/desktop/image-product.jpg");
+    background-size: 100%;
+    @media(max-width:1150px) {
+        background: url("../../images/product-yx1-earphones/tablet/image-product.jpg");
+        background-size: 100%;
+    }
+    @media(max-width: 700px){
+        background: url("../../images/product-yx1-earphones/mobile/image-product.jpg");
+        background-size: 100%;
+    }
+}
+.yx1Img1{
+    background: url("../../images/product-yx1-earphones/desktop/image-gallery-1.jpg");
+    background-size: 100%;
+    @media(max-width:1150px) {
+        background: url("../../images/product-yx1-earphones/tablet/image-gallery-1.jpg");
+        background-size: 100%;
+    }
+    @media(max-width: 700px){
+        background: url("../../images/product-yx1-earphones/mobile/image-gallery-1.jpg");
+        background-size: 100%;
+    }
+}
+.yx1Img2{
+    background: url("../../images/product-yx1-earphones/desktop/image-gallery-2.jpg");
+    background-size: 100%;
+    @media(max-width:1150px) {
+        background: url("../../images/product-yx1-earphones/tablet/image-gallery-2.jpg");
+        background-size: 100%;
+    }
+    @media(max-width: 700px){
+        background: url("../../images/product-yx1-earphones/mobile/image-gallery-2.jpg");
+        background-size: 100%;
+    }
+}
+.yx1Img3{
+    background: url("../../images/product-yx1-earphones/desktop/image-gallery-3.jpg");
+    background-size: 100%;
+    @media(max-width:1150px) {
+        background: url("../../images/product-yx1-earphones/tablet/image-gallery-3.jpg");
+        background-size: 100%;
+    }
+    @media(max-width: 700px){
+        background: url("../../images/product-yx1-earphones/mobile/image-gallery-3.jpg");
+        background-size: 100%;
+    }
+}

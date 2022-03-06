@@ -17,7 +17,7 @@ const HeadphonesMain = () => {
               It redefines your premium headphone experience by reproducing the balanced 
               depth and precision of studio-quality sound.
             </p>
-            <button>SEE PRODUCT</button>
+            <button><Link to="/reactproject4/headphones/x99m2">SEE PRODUCT</Link></button>
           </div>
         </div>
       </div>
@@ -31,7 +31,7 @@ const HeadphonesMain = () => {
               detailed and accurate audio reproduction for audiophiles, mixing engineers,
                and music aficionados alike in studios and on the go.
             </p>
-            <button>SEE PRODUCT</button>
+            <button><Link to="/reactproject4/headphones/x99m1">SEE PRODUCT</Link></button>
           </div>
         </div>
       </div>
@@ -45,7 +45,7 @@ const HeadphonesMain = () => {
               to your specific tastes with the XX59 headphones. The stylish yet durable 
               versatile wireless headset is a brilliant companion at home or on the move.
             </p>
-            <button>SEE PRODUCT</button>
+            <button><Link to="/reactproject4/headphones/xx59">SEE PRODUCT</Link></button>
           </div>
         </div>
       </div>
