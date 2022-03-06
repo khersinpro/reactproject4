@@ -59,14 +59,14 @@ const HomeMain = () => {
                         Upgrade to premium speakers that are phenomenally built to 
                         deliver truly remarkable sound.
                     </p>
-                    <button>SEE PRODUCT</button>
+                    <button><Link to='/reactproject4/speakers/zx9'>SEE PRODUCT</Link></button>
                 </div>
             </div>
         </div>
         <div className='secondBox'>
             <div className='secondBox__text'>
                 <h2>ZX7 SPEAKER</h2>
-                <button>SEE PRODUCT</button>
+                <button><Link to='/reactproject4/speakers/zx7'>SEE PRODUCT</Link></button>
             </div>
         </div>
         <div className='thirdBox'>
@@ -75,7 +75,7 @@ const HomeMain = () => {
             <div className='thirdBox__right'>
                 <div className='thirdBox__right--box'>
                     <h2>YX1 EARPHONE</h2>
-                    <button>SEE PRODUCT</button>
+                    <button><Link to='/reactproject4/earphones/yx1'>SEE PRODUCT</Link></button>
                 </div>
             </div>
         </div>

@@ -216,8 +216,16 @@ main{
                 font-size: 13px;
                 font-weight: bold;
                 cursor: pointer;
+                display: flex;
                 &:hover{
                     background: #4C4C4C;
+                }
+                a{
+                    text-decoration: none;
+                    color: $whiteTxt;
+                    height: 100%;
+                    width: 100%;
+                    line-height: 48px;
                 }
             }
         }
@@ -267,10 +275,21 @@ main{
             letter-spacing: 1px;
             font-weight: bold;
             font-size: 13px;
+            display: flex;
             @media(max-width:1150px) {
                 background: transparent;
                 border: black solid 2px;
                 color: #000000;
+            }
+            a{
+                text-decoration: none;
+                color: $whiteTxt;
+                height: 100%;
+                width: 100%;
+                line-height: 48px;
+                @media(max-width: 1150px) {
+                    color: #000;
+                }
             }
         }
     }
@@ -348,11 +367,22 @@ main{
                 letter-spacing: 1px;
                 font-weight: bold;
                 font-size: 13px;
+                display: flex;
                 @media(max-width:1150px) {
                     background: transparent;
                     border: black solid 2px;
                     color: #000000;
         
+                }
+                a{
+                    text-decoration: none;
+                    color: $whiteTxt;
+                    height: 100%;
+                    width: 100%;
+                    line-height: 48px;
+                    @media(max-width: 1150px) {
+                        color: #000;
+                    }
                 }
             }
         }

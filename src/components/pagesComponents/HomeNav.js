@@ -68,7 +68,7 @@ const HomeNav = ({openBurger, burger}) => {
                 Experience natural, life like audio and exceptional 
                 build quality made for the passionate music enthusiast.
             </p>
-            <button><Link to="#">SEE PRODUCT</Link></button>
+            <button><Link to="/reactproject4/headphones/x99m2">SEE PRODUCT</Link></button>
         </div>
     </header>
   )
