@@ -1,11 +1,34 @@
-import React from "react";
+import React, {useState, useContext} from "react";
 import { Link } from "react-router-dom";
 import earphones from "../../../images/shared/desktop/image-category-thumbnail-earphones.png";
 import speakers from "../../../images/shared/desktop/image-category-thumbnail-speakers.png";
 import headphones from "../../../images/shared/desktop/image-category-thumbnail-headphones.png";
-import speakerMain from "../../../images/home/desktop/image-speaker-zx9.png";
+import { CartContext } from "../../../CartContext";
+
 
 const MainX992 = () => {
+  const [number, setNumber] = useState(1)
+  const [x99MarkTwo, setX99MarkTwo] = useState({name: "X99 MARK II", price: "2.999", number: number})
+  const {testContext, setTestContext} = useContext(CartContext)
+  
+  const clickAdd = (e) =>{
+    if(e.target.value === "-"){
+      if(number <= 1){
+      }else{
+        setNumber(number - 1)
+      }
+    }else{
+      setNumber(number + 1)
+    }   
+  }
+
+  const addToCart = (nom, number) =>{
+    setTestContext([...testContext, {number: number, name: nom , price: 599, device: "$", img : "image-xx99-mark-two-headphones.jpg"} ])
+  } 
+
+
+
+
   return (
     <main className="articleContainer">
       <div className="articleLink">
@@ -33,11 +56,11 @@ const MainX992 = () => {
 
           <div className="articleBox1__order--sendOrder">
             <div className="inputContainer">
-              <button>-</button>
-              <input id="number" type="text" value="0" readOnly />
-              <button>+</button>
+              <button onClick={clickAdd} value="-">-</button>
+              <input id="number" type="text" value={number} readOnly />
+              <button onClick={clickAdd} value='+'>+</button>
             </div>
-            <button className="addToCart">ADD TO CART</button>
+            <button className="addToCart" onClick={() => addToCart("XX99 MK II", number)}>ADD TO CART</button>
           </div>
         </div>
       </div>
@@ -124,9 +147,9 @@ const MainX992 = () => {
                 <path
                   d="M1.322 1l5 5-5 5"
                   stroke="#D87D4A"
-                  stroke-width="2"
+                  strokeWidth="2"
                   fill="none"
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                 />
               </svg>
             </div>
@@ -143,9 +166,9 @@ const MainX992 = () => {
                 <path
                   d="M1.322 1l5 5-5 5"
                   stroke="#D87D4A"
-                  stroke-width="2"
+                  strokeWidth="2"
                   fill="none"
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                 />
               </svg>
             </div>
@@ -162,9 +185,9 @@ const MainX992 = () => {
                 <path
                   d="M1.322 1l5 5-5 5"
                   stroke="#D87D4A"
-                  stroke-width="2"
+                  strokeWidth="2"
                   fill="none"
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                 />
               </svg>
             </div>

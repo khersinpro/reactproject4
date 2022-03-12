@@ -1,11 +1,29 @@
-import React from "react";
+import React, {useContext, useState} from "react";
 import { Link } from "react-router-dom";
 import earphones from "../../../images/shared/desktop/image-category-thumbnail-earphones.png";
 import speakers from "../../../images/shared/desktop/image-category-thumbnail-speakers.png";
 import headphones from "../../../images/shared/desktop/image-category-thumbnail-headphones.png";
+import { CartContext } from "../../../CartContext";
 
 const MainYx1 = () => {
-  return (
+  const [number, setNumber] = useState(1)
+  const {testContext, setTestContext} = useContext(CartContext)
+
+  const clickAdd = (e) =>{
+    if(e.target.value === "-"){
+     if(number <= 1){
+     }else{
+       setNumber(number - 1)
+     }
+    }else(
+      setNumber(number + 1)
+    )
+  }
+
+  const addToCart = (nom, number) =>{
+    setTestContext([...testContext, {number: number, name: nom , price: 599, device: "$", img : "image-yx1-earphones.jpg"} ])
+  }
+  return(
     <main className="articleContainer">
       <div className="articleLink">
         <Link to="/reactproject4/earphones">Go Back</Link>
@@ -30,11 +48,11 @@ const MainYx1 = () => {
 
           <div className="articleBox1__order--sendOrder">
             <div className="inputContainer">
-              <button>-</button>
-              <input id="number" type="text" value="0" readOnly />
-              <button>+</button>
+              <button value='-' onClick={clickAdd}>-</button>
+              <input id="number" type="text" value={number} readOnly />
+              <button value='+' onClick={clickAdd}>+</button>
             </div>
-            <button className="addToCart">ADD TO CART</button>
+            <button className="addToCart" onClick={() => addToCart("yx1", number)}>ADD TO CART</button>
           </div>
         </div>
       </div>
@@ -113,9 +131,9 @@ const MainYx1 = () => {
                 <path
                   d="M1.322 1l5 5-5 5"
                   stroke="#D87D4A"
-                  stroke-width="2"
+                  strokeWidth="2"
                   fill="none"
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                 />
               </svg>
             </div>
@@ -132,9 +150,9 @@ const MainYx1 = () => {
                 <path
                   d="M1.322 1l5 5-5 5"
                   stroke="#D87D4A"
-                  stroke-width="2"
+                  strokeWidth="2"
                   fill="none"
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                 />
               </svg>
             </div>
@@ -151,9 +169,9 @@ const MainYx1 = () => {
                 <path
                   d="M1.322 1l5 5-5 5"
                   stroke="#D87D4A"
-                  stroke-width="2"
+                  strokeWidth="2"
                   fill="none"
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                 />
               </svg>
             </div>

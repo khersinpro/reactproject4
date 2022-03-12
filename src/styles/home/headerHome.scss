@@ -256,7 +256,6 @@ nav{
         background: $color1;
         cursor: pointer;
         border: none;
-        display: flex;
         &:hover{
             background: $color1Hover;
         }
@@ -269,6 +268,8 @@ nav{
             width: 100%;
             height: 100%;
             line-height: 48px;
+            display: flex;
+            justify-content: center;
         }
     }
 }
@@ -285,5 +286,153 @@ nav{
     }
     @media(max-width: 600px) {
         padding: 0 3%;
+    }
+}
+.cartModal{
+    .bgModal{
+        position: fixed;
+        inset: 0 0 0 0;
+        background-color: rgba(8, 8, 8, 0.486);
+        z-index: 55;
+        cursor: pointer;
+    }
+    &__modal{
+        height: 488px;
+        width: 377px;
+        border-radius: 8px;
+        background-color: white;
+        position: absolute; 
+        z-index: 2000;
+        right: 10%;
+        top: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 31px 0;
+        @media(max-width: 600px) {
+            width: 327px;
+            right: 50%;
+            top: 120px;
+            transform: translateX(50%);
+        }
+        &--cartLength{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height:25px ;
+            width: 313px;
+            p{
+                font-weight: 700;
+                font-size: 18px;
+                letter-spacing: 1.28571px;                
+            }
+            button{
+                font-weight: 500;
+                font-size: 15px;
+                opacity: 0.5;
+                border: none;
+                background: transparent;
+                cursor: pointer;
+                text-decoration: underline;
+                &:hover{
+                    color: $color1Hover;
+                }
+            }
+        }
+        &--cart{
+            height: 240px;
+            min-width: 313px;
+            margin: 32px 0;
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+        &--cartPrice{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 313px;
+            height: 25px;
+            margin-bottom: 24px;
+            .first{
+                font-weight: 500;
+                font-size: 15px;
+                opacity: 0.5;
+            }
+            .price{
+                font-weight: 700;
+                font-size: 18px;
+            }
+        }
+        &--checkOut{
+            width: 313px;
+            height: 48px;
+            color: $whiteTxt;
+            background: $color1;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            border: none;
+            &:hover{
+                background-color: $color1Hover;
+            }
+        }
+        .artContainer{
+            width: 313px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 5px 24px ;
+            &__left{
+                display: flex;
+                align-items: center;
+                img{
+                    height: 64px;
+                    width: 64px;
+                    border-radius: 8px;
+                }
+                &--txt{
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0 16px;
+                    .name{
+                        font-weight: 700;
+                        font-size: 15px;
+                        color: #000;
+                    }
+                    .price{
+                        font-weight: 700;
+                        font-size: 14px;
+                        color: #000;
+                        opacity: 0.5;
+                    }
+                }
+            }
+            .inputContainer{
+                button{
+                    width: 32px;
+                    height: 32px;
+                    border: none;
+                    background: $color3;
+                    cursor: pointer;
+                    font-weight: bold;
+                    font-size: 13px;
+                }
+                input{
+                    font-weight: bold;
+                    width: 32px;
+                    height: 32px;
+                    border: none;
+                    background: $color3;
+                    text-align: center;
+                    pointer-events: none;
+                    font-size: 13px;
+                }
+            }
+        }
     }
 }

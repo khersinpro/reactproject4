@@ -1,4 +1,4 @@
-import React, {Fragment, useState} from 'react'
+import React, {Fragment, useState, useEffect} from 'react'
 import { BrowserRouter, Routes , Route } from 'react-router-dom'
 import Home from './components/Home';
 import Headphones from './components/Headphones';
@@ -10,11 +10,39 @@ import Xx59 from './components/HeadphonesPages/XX59/Xx59';
 import Zx9 from './components/SpeakersPages/zx9Speaker/Zx9';
 import Zx7 from './components/SpeakersPages/zx7Speaker/Zx7';
 import Yx1 from './components/EarphonesPages/Yx1Hearphone/Yx1';
+import { CartContext, Count } from './CartContext';
 import './styles/main.scss';
 
 function App() {
   const category = ["HEADPHONES", "SPEAKERS", "EARPHONES"]
   const [burger, setBurger] = useState(false)
+  const [cart, setCart] = useState(false)
+  const [testContext, setTestContext] = useState([])
+  const [cartDisplay, setCartDisplay] = useState(null)
+  
+  useEffect(() => {
+    if(localStorage.getItem("cart") && testContext.length === []) {
+      const local =  localStorage.getItem('cart')
+      setTestContext(JSON.parse(local))
+    }else{
+      console.log("MaJ", testContext);
+      localStorage.setItem("cart", JSON.stringify(testContext))
+    }
+    
+  }, [testContext])
+  
+  const openCart = () => {
+    setCart(!cart)
+    
+    if(cart){
+      document.body.style.overflow = ""
+
+    }else{
+      // document.body.style.overflow = "hidden"
+      // document.body.style.height = '101vh'
+    }
+  }
+  
 
   const openBurger = (e) => {
     setBurger(!burger)
@@ -23,11 +51,15 @@ function App() {
   return (
     <Fragment>
         <BrowserRouter>
+      <CartContext.Provider value={{testContext, setTestContext}}>
           <Routes>
             <Route path="/reactproject4/" 
               element={<Home 
                 openBurger={openBurger} 
                 burger={burger} 
+                cart={cart}
+                openCart={openCart}
+                
               />} 
             />
 
@@ -71,7 +103,7 @@ function App() {
               />} />      
             <Route path="/reactproject4/speakers/zx9" 
               element={<Zx9
-              openBurger={openBurger} 
+                openBurger={openBurger} 
               burger={burger}
               />} />      
 //**************END SPEAKER ARTICLES *****************************// 
@@ -82,7 +114,7 @@ function App() {
                 burger={burger}
                 name={category}
               />} 
-            />
+              />
 
 //***********************EARPHONES ARTICLES****************************// 
             <Route path="/reactproject4/earphones/yx1" 
@@ -92,6 +124,7 @@ function App() {
               />} />           
 //**************END EARPHONES ARTICLES *****************************// 
           </Routes>
+              </CartContext.Provider>
         </BrowserRouter>
     </Fragment>
   );
