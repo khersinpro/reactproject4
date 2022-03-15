@@ -90,8 +90,10 @@ const CartModal = () => {
           <p className="price">$ {priceTest}</p>
         </div>
 
-        <button className="cartModal__modal--checkOut">
-          <Link to="/reactproject4/checkout">CHECKOUT</Link>
+        <button className="cartModal__modal--checkOut" >
+          <Link to="/reactproject4/checkout" 
+            style={{pointerEvents: `${testContext.length < 1 ? "none" : ""}`}} 
+            onClick={openCart}>{testContext.length < 1 ? "EMPTY CART" : "CHECKOUT"}</Link>
         </button>
       </div>
     </div>

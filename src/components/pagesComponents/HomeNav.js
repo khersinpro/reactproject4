@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from "react";
+import React, {useContext } from "react";
 import { Link } from "react-router-dom";
 import CartModal from "../CartModal";
 import logo from "../../images/shared/desktop/logo.svg";
@@ -16,7 +16,7 @@ const HomeNav = ({ openBurger, burger }) => {
   return (
       <header className="homeNav">
         <CartModal />
-        <nav>
+        <nav >
           <div className="logoContainer">
             <img
               className="burger"
@@ -24,9 +24,9 @@ const HomeNav = ({ openBurger, burger }) => {
               src={burgerMenu}
               alt="burger"
             />
-            <img className="logo" src={logo} alt="logo" />
+            <Link to='/reactproject4/'><img className='logo' src={logo} alt="logo" /></Link>
           </div>
-          {burger && <div className="bgLink"></div>}
+          {burger && <div className="bgLink" onClick={openBurger}></div>}
           <div className={`linkContainer ${!burger && "openOrClose"}`}>
             <div className="navContainer home">
               <Link to="/reactproject4/">HOME</Link>
@@ -97,7 +97,7 @@ const HomeNav = ({ openBurger, burger }) => {
               </Link>
             </div>
           </div>
-          <img className="cart" src={cart} alt="cart" onClick={openCart} />
+          <img className="cart" src={cart} alt="cart" onClick={!burger ? openCart : openBurger} />
         </nav>
         <div className="presentationHeader">
           <p className="firstTxt">NEW PRODUCT</p>

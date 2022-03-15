@@ -17,8 +17,9 @@ const CategorieNav = ({openBurger, burger, name}) => {
         <nav>
             <div className='logoContainer'>
                 <img className='burger' onClick={openBurger} src={burgerMenu} alt='burger' /> 
-                <Link to='/reactproject4/home'><img className='logo' src={logo} alt="logo" /></Link>
+                <Link to='/reactproject4/'><img className='logo' src={logo} alt="logo" /></Link>
             </div>
+            {burger && <div className="bgLink" onClick={openBurger}></div>}
             <div className={`linkContainer ${!burger && "openOrClose"}`}>
                 <div className='navContainer home'>
                     <Link to="/reactproject4/">HOME</Link>
@@ -63,7 +64,7 @@ const CategorieNav = ({openBurger, burger, name}) => {
                     </Link>
                 </div>
             </div>
-            <img className='cart' src={cart} alt="cart" onClick={openCart}/>
+            <img className='cart' src={cart} alt="cart" onClick={!burger ? openCart : openBurger}/>
         </nav>
         <p className='catNav__title'>{name}</p>
     </header>

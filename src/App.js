@@ -19,7 +19,6 @@ function App() {
   const [burger, setBurger] = useState(false)
   const [cart, setCart] = useState(false)
   const [testContext, setTestContext] = useState([])
-  const [cartDisplay, setCartDisplay] = useState(null)
   
   useEffect(() => {
     if(!localStorage.getItem("cart")){
@@ -35,16 +34,7 @@ function App() {
   
   const openCart = () => {
     setCart(!cart)
-    
-    if(cart){
-      document.body.style.overflow = ""
-
-    }else{
-      // document.body.style.overflow = "hidden"
-      // document.body.style.height = '101vh'
-    }
   }
-  
 
   const openBurger = (e) => {
     setBurger(!burger)
