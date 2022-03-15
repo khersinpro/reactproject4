@@ -68,6 +68,10 @@ nav{
        .logo{
         width: 143px;
         height: 25px;
+        @media(max-width: 830px) {
+            position: relative;
+            z-index: 3;
+        }
         @media(max-width: 600px) {
             position: absolute;
             left: 50%;
@@ -94,6 +98,8 @@ nav{
         &:hover{
             cursor: pointer;
         }
+        position: relative;
+        z-index: 3;
     }
     .openOrClose{
         @media(max-width: 830px) {
@@ -112,6 +118,7 @@ nav{
             position: absolute;
             z-index: 20;
             transition: 0.2s ease ;
+            
         }
         @media(max-width: 600px) {
             height: 750px;
@@ -119,6 +126,7 @@ nav{
             justify-content: start;
             align-items: center;
         }
+
         .home{
             @media(max-width:830px){
                 display: none;
@@ -189,18 +197,18 @@ nav{
                 }
             }
             .headphones{
-                height: 104px;
-                width: 79.92px;
+                height: 106px;
+                width: 96.92px;
                 margin: 0;
             }
             .earphones{
                 height: 104px ;
-                width: 103px;
+                width: 113px;
                 margin: 0;
             }
             .wat{
                 height: 101px;
-                width: 84.04px;
+                width: 98.04px;
                 margin: 0;
             }
         }
@@ -304,7 +312,7 @@ nav{
         position: absolute; 
         z-index: 2000;
         right: 10%;
-        top: 10%;
+        top: 110px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -322,6 +330,9 @@ nav{
             justify-content: space-between;
             height:25px ;
             width: 313px;
+            @media(max-width: 600px) {
+                width: 300px;
+            }
             p{
                 font-weight: 700;
                 font-size: 18px;
@@ -344,10 +355,13 @@ nav{
             height: 240px;
             min-width: 313px;
             margin: 32px 0;
-            overflow-y: scroll;
+            overflow-y: auto;
             display: flex;
             flex-direction: column;
             justify-content: start;
+            @media(max-width:600px) {
+                width: 300px;
+            }
         }
         &--cartPrice{
             display: flex;
@@ -356,6 +370,9 @@ nav{
             width: 313px;
             height: 25px;
             margin-bottom: 24px;
+            @media(max-width:600px) {
+                width: 300px;
+            }
             .first{
                 font-weight: 500;
                 font-size: 15px;
@@ -369,13 +386,25 @@ nav{
         &--checkOut{
             width: 313px;
             height: 48px;
-            color: $whiteTxt;
             background: $color1;
             font-weight: 700;
             font-size: 13px;
             letter-spacing: 1px;
             cursor: pointer;
             border: none;
+            @media(max-width:600px) {
+                width: 300px;
+            }
+            a{
+                color: $whiteTxt;
+                display: flex;
+                height: 100%;
+                width: 100%;
+                text-decoration: none;
+                justify-content: center;
+                align-items: center;
+                
+            }
             &:hover{
                 background-color: $color1Hover;
             }
@@ -387,6 +416,11 @@ nav{
             align-items: center;
             justify-content: space-between;
             margin: 0 5px 24px ;
+            @media(max-width:600px) {
+                width: 100%;
+                margin: 0 0 24px;
+                padding-right: 5px;
+            }
             &__left{
                 display: flex;
                 align-items: center;
@@ -399,6 +433,7 @@ nav{
                     display: flex;
                     flex-direction: column;
                     margin: 0 16px;
+                    
                     .name{
                         font-weight: 700;
                         font-size: 15px;
@@ -434,5 +469,13 @@ nav{
                 }
             }
         }
+    }
+}
+.bgLink{
+    @media(max-width: 830px) {
+        inset: 0 0 0 0;
+        background-color: rgba(0, 0, 0, 0.486);
+        position: fixed;
+        z-index: 2;
     }
 }

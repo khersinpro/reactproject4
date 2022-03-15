@@ -10,6 +10,7 @@ import Xx59 from './components/HeadphonesPages/XX59/Xx59';
 import Zx9 from './components/SpeakersPages/zx9Speaker/Zx9';
 import Zx7 from './components/SpeakersPages/zx7Speaker/Zx7';
 import Yx1 from './components/EarphonesPages/Yx1Hearphone/Yx1';
+import CheckOut from './components/CheckOut';
 import { CartContext, Count } from './CartContext';
 import './styles/main.scss';
 
@@ -21,11 +22,12 @@ function App() {
   const [cartDisplay, setCartDisplay] = useState(null)
   
   useEffect(() => {
-    if(localStorage.getItem("cart") && testContext.length === []) {
+    if(!localStorage.getItem("cart")){
+      localStorage.setItem("cart", JSON.stringify(testContext))
+    }else if(localStorage.getItem("cart").length > 2 && testContext.length === 0) {
       const local =  localStorage.getItem('cart')
       setTestContext(JSON.parse(local))
     }else{
-      console.log("MaJ", testContext);
       localStorage.setItem("cart", JSON.stringify(testContext))
     }
     
@@ -51,10 +53,19 @@ function App() {
   return (
     <Fragment>
         <BrowserRouter>
-      <CartContext.Provider value={{testContext, setTestContext}}>
+      <CartContext.Provider value={{testContext, setTestContext, cart, openCart}}>
           <Routes>
             <Route path="/reactproject4/" 
               element={<Home 
+                openBurger={openBurger} 
+                burger={burger} 
+                cart={cart}
+                openCart={openCart}      
+              />} 
+            />
+
+            <Route path="/reactproject4/checkout" 
+              element={<CheckOut
                 openBurger={openBurger} 
                 burger={burger} 
                 cart={cart}

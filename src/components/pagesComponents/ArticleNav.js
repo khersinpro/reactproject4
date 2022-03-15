@@ -1,15 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import CartModal from '../CartModal'
 import logo from '../../images/shared/desktop/logo.svg'
 import cart from '../../images/shared/desktop/icon-cart.svg'
 import burgerMenu from '../../images/shared/tablet/icon-hamburger.svg'
 import earphones from '../../images/shared/desktop/image-category-thumbnail-earphones.png'
 import speakers from '../../images/shared/desktop/image-category-thumbnail-speakers.png'
 import headphones from '../../images/shared/desktop/image-category-thumbnail-headphones.png'
+import { CartContext } from '../../CartContext'
 
 const ArticleNav = ({openBurger, burger}) => {
+    const {openCart} = useContext(CartContext)
   return (
     <header className='articleNav'>
+        <CartModal />
         <nav>
             <div className='logoContainer'>
                 <img className='burger' onClick={openBurger} src={burgerMenu} alt='burger' /> 
@@ -59,7 +63,7 @@ const ArticleNav = ({openBurger, burger}) => {
                     </Link>
                 </div>
             </div>
-            <img className='cart' src={cart} alt="cart" />
+            <img className='cart' src={cart} alt="cart"  onClick={openCart}/>
         </nav>
     </header>
   )
