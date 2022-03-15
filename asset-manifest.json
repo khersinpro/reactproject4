@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/reactproject4/static/css/main.552ea71e.css",
-    "main.js": "/reactproject4/static/js/main.859c2396.js",
+    "main.css": "/reactproject4/static/css/main.6e149115.css",
+    "main.js": "/reactproject4/static/js/main.92e112ef.js",
     "static/js/787.8093f5c1.chunk.js": "/reactproject4/static/js/787.8093f5c1.chunk.js",
     "static/media/image-speaker-zx9.png": "/reactproject4/static/media/image-speaker-zx9.153cd899b91a08b22b1a.png",
     "static/media/image-best-gear.jpg": "/reactproject4/static/media/image-best-gear.4d4a28e9e7c9ab158dd8.jpg",
@@ -27,12 +27,12 @@
     "static/media/icon-facebook.svg": "/reactproject4/static/media/icon-facebook.e9773e52bc64ea377cb95af7ccb6877e.svg",
     "static/media/pattern-circles.svg": "/reactproject4/static/media/pattern-circles.f4df3610b83b818abbbe.svg",
     "static/media/icon-hamburger.svg": "/reactproject4/static/media/icon-hamburger.f8a9f0cf12d419a7d18556f98d81a47e.svg",
-    "main.552ea71e.css.map": "/reactproject4/static/css/main.552ea71e.css.map",
-    "main.859c2396.js.map": "/reactproject4/static/js/main.859c2396.js.map",
+    "main.6e149115.css.map": "/reactproject4/static/css/main.6e149115.css.map",
+    "main.92e112ef.js.map": "/reactproject4/static/js/main.92e112ef.js.map",
     "787.8093f5c1.chunk.js.map": "/reactproject4/static/js/787.8093f5c1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.552ea71e.css",
-    "static/js/main.859c2396.js"
+    "static/css/main.6e149115.css",
+    "static/js/main.92e112ef.js"
   ]
 }
