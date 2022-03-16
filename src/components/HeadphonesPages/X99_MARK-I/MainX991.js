@@ -7,12 +7,9 @@ import { CartContext } from "../../../CartContext";
 
 const MainX991 = () => {
   const [number, setNumber] = useState(1);
-  const [x99MarkOne, setX99MarkOne] = useState({
-    name: "X99 MARK I",
-    price: "1.999",
-    number: number,
-  });
-  const { testContext, setTestContext } = useContext(CartContext);
+  const [xx99m1, setXx99m1] = useState({name: "XX99 MK I", price: 1750, device: "$", img : "image-xx99-mark-one-headphones.jpg"})
+  const {addToCart} = useContext(CartContext)
+  const {name, price, device, img} = xx99m1
 
   const clickAdd = (e) => {
     if (e.target.value === "-") {
@@ -23,9 +20,6 @@ const MainX991 = () => {
     } else setNumber(number + 1);
   };
 
-  const addToCart = (nom, number) => {
-    setTestContext([...testContext, {number: number, name: nom , price: 599, device: "$", img : "image-xx99-mark-one-headphones.jpg"} ])
-  };
 
   return (
     <main className="articleContainer">
@@ -62,7 +56,7 @@ const MainX991 = () => {
             </div>
             <button
               className="addToCart"
-              onClick={() => addToCart("XX99 MK I", number)}
+              onClick={() => addToCart(name, number, price, device, img)}
             >
               ADD TO CART
             </button>

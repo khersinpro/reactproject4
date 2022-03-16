@@ -8,7 +8,9 @@ import { CartContext } from "../../../CartContext";
 const MainXx59 = () => {
 
   const [number, setNumber] = useState(1)
-  const {testContext, setTestContext} = useContext(CartContext)
+  const [xx59, setXx59] = useState({name: "XX59", price: 899, device: "$", img : "image-xx59-headphones.jpg"})
+  const {addToCart} = useContext(CartContext)
+  const {name, price, device, img} = xx59
 
   const clickAdd = (e) =>{
     if(e.target.value === "-"){
@@ -20,11 +22,7 @@ const MainXx59 = () => {
       setNumber(number + 1)
     )
   }
-
-  const addToCart = (nom, number) =>{
-    setTestContext([...testContext, {number: number, name: nom , price: 599, device: "$", img : "image-xx59-headphones.jpg"} ])
-  }
-
+  
   return (
     <main className="articleContainer">
       <div className="articleLink">
@@ -55,7 +53,7 @@ const MainXx59 = () => {
               <input id="number" type="text" value={number} readOnly />
               <button value="+" onClick={clickAdd} >+</button>
             </div>
-            <button className="addToCart" onClick={() => addToCart("XX59", number)} >ADD TO CART</button>
+            <button className="addToCart" onClick={() => addToCart(name, number, price, device, img)} >ADD TO CART</button>
           </div>
         </div>
       </div>

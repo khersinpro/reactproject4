@@ -40,10 +40,30 @@ function App() {
     setBurger(!burger)
   }
 
+  const addToCart = (nom, number, price , device , img) =>{
+    let contextValue = testContext.map((element, idx) => (
+      element.name === nom ? {...element, number: element.number + number} : element
+    ) )
+
+    if(testContext.length >= 1){
+      for (let i = 0; i < testContext.length; i++) {
+       if(testContext[i].name === nom){
+         setTestContext(contextValue)
+         break
+       }else if (testContext.length-1 == i){
+         setTestContext([...testContext, {number: number, name: nom , price: price, device: device, img : img} ])
+         break
+       }
+      }
+   }else{
+    setTestContext([...testContext, {number: number, name: nom , price: price, device: device, img : img} ])
+   }
+  }
+
   return (
     <Fragment>
         <BrowserRouter>
-      <CartContext.Provider value={{testContext, setTestContext, cart, openCart}}>
+      <CartContext.Provider value={{testContext, setTestContext, cart, openCart, addToCart}}>
           <Routes>
             <Route path="/reactproject4/" 
               element={<Home 

@@ -7,8 +7,10 @@ import { CartContext } from "../../../CartContext";
 
 const MainZx7 = () => {
   const [number, setNumber] = useState(1)
-  const {testContext, setTestContext} = useContext(CartContext)
-  
+  const {addToCart} = useContext(CartContext)
+  const [zx7, setZx7] = useState({name: "zx7" , price: 3500, device: "$", img: "image-zx7-speaker.jpg" })
+  const {name, price, device, img} = zx7
+
   const clickAdd = (e) =>{
     if(e.target.value === "-"){
      if(number <= 1){
@@ -18,11 +20,6 @@ const MainZx7 = () => {
     }else(
       setNumber(number + 1)
     )
-  }
-
-  const addToCart = (nom, number) =>{
-    setTestContext([...testContext, {number: number, name: nom , price: 3500, device: "$", img: "image-zx7-speaker.jpg" }] )
-    
   }
 
   return (
@@ -53,7 +50,7 @@ const MainZx7 = () => {
               <input id="number" type="text" value={number} readOnly />
               <button value="+" onClick={clickAdd}>+</button>
             </div>
-            <button className="addToCart" onClick={() => addToCart("zx7", number)}>ADD TO CART</button>
+            <button className="addToCart" onClick={() => addToCart(name, number, price, device, img)}>ADD TO CART</button>
           </div>
         </div>
       </div>
