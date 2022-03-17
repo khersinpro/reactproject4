@@ -50,7 +50,7 @@ const HomeMain = () => {
         </div>
         <div className='firstBox'>
             <div className='firstBox__left'>
-                <img src={speakerMain} />
+                <img src={speakerMain}  alt="speaker"/>
             </div>
             <div className='firstBox__right'>
                 <div className='firstBox__right--text'>

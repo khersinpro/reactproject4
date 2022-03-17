@@ -1,6 +1,7 @@
-import React,{Fragment, useState, useContext} from 'react'
+import React,{Fragment, useState, useContext, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../CartContext'
+import CheckOutModal from './CheckOutModal'
 import ArticleNav from "./pagesComponents/ArticleNav"
 import Footer from "./pagesComponents/Footer"
 import shape from '../images/cart/Shape.png'
@@ -9,22 +10,28 @@ const CheckOut = ({openBurger, burger}) => {
     const [radiobtn, setradiobtn] = useState("money")
     const [nameCtrl, setNameCtrl] = useState(true)
     const [emailCtrl, setEmailCtrl] = useState(true)
-    const {testContext} = useContext(CartContext)
+    const {testContext, confirm, confirmChecker} = useContext(CartContext)
+
     let vat = 0
     let pricing  = 0
     let shipping = 50
 
+    const openCheckTop = () => {
+        window.scrollTo(0, 0);
+        confirmChecker()
+    }
+
     const changeRadio = (e) => {
         setradiobtn(e.target.value)
     }
-
-    if(testContext.length > 2){
+    
+    if(testContext.length > 0){
         for(let i = 0 ; i < testContext.length ; i++){
             pricing += testContext[i].price * testContext[i].number
         }
         vat = (pricing * 20 /100)
     }
-    
+
     const formChecker = (e) => {
         switch (e.target.id){
             case "email":
@@ -182,11 +189,12 @@ const CheckOut = ({openBurger, burger}) => {
                     <p className='checkOutRight__txt--scd'>$ {vat}</p>
                 </div>
                 <div className='checkOutRight__txt lastTxt'>
-                    <p className='checkOutRight__txt--first'>GRAND TOTAL</p>
+                    <p className='checkOutRight__txt--first' >GRAND TOTAL</p>
                     <p className='checkOutRight__txt--scd grandTotal'>$ {pricing + shipping}</p>
                 </div>
-                <button>{radiobtn === "money" ? ("CONTINUE & PAY") : ("CONTINUE")}</button>
+                <button onClick={() => openCheckTop()}>{radiobtn === "money" ? ("CONTINUE & PAY") : ("CONTINUE")}</button>
             </div>
+            {confirm && <CheckOutModal />}
         </main>
         <Footer />
     </Fragment>

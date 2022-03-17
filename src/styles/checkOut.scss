@@ -376,3 +376,152 @@
     }
 }
 
+//***********MODAL**********//
+.checkOutModal{
+    position: absolute;
+    inset: 0 0 0 0;
+    background-color: rgba(0, 0, 0, 0.507);
+    display: flex;
+    justify-content: center;
+    z-index: 78;
+    .redirectModal{
+        position: absolute;
+        inset: 0 0 0 0;
+        z-index: 79;
+        cursor: pointer;        
+    }
+    &__modal{
+        width: 540px;
+        height: 581px;
+        background: $whiteTxt;
+        margin-top: 125px;
+        border-radius: 8px;
+        padding: 45px;
+        position: absolute;
+        z-index: 100;
+        &--check{
+            border-radius: 50%;
+            background-color: $color1;
+            height: 64px;
+            width: 64px;   
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &--txt1{
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 36px;
+            width: 284px;
+            height: 72px;
+            letter-spacing: 1.14286px;
+            margin: 33px 0 24px;
+        }
+        &--txt2{ 
+            margin-bottom: 33px;
+            font-weight: 500;
+            font-size: 15px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+        &--container{
+            width: 444px ;
+            height: 140px;
+            display: flex;
+            .left{
+                width: 246px ;
+                height: 100%;
+                display: flex;
+                .leftContainer{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 24px;
+                    background: $color3;
+                    border-radius: 8px 0px 0px 8px;
+                    .top{
+                        width: 198px;
+                        display: flex;
+                        justify-content: space-between;
+                        &__left{
+                            display: flex;
+                            img{
+                                height: 32px;
+                                width: 28px;
+                                margin-right: 10px;
+                            }
+                            .nameCheck{
+                                font-weight: 700;
+                                font-size: 15px;
+                            }
+                            .priceCheck{
+                                font-weight: 700;
+                                font-size: 14px;
+                                color: rgba(0, 0, 0, 0.5);
+                            }
+                        }
+                        &__right{
+                            .numberCheck{
+                                font-weight: 700;
+                                font-size: 15px;
+                                color: rgba(0, 0, 0, 0.5);
+                            }
+                        }
+                    }
+                    .bottom{
+                        border-top: rgba(0, 0, 0, 0.08) solid 1px;
+                        width: 198px;
+                        text-align: center;
+                        margin-top: 10px;
+                        p{
+                            margin-top: 12px;
+                            font-weight: 700;
+                            font-size: 12px;
+                            letter-spacing: -0.214286px;  
+                            color: rgba(0, 0, 0, 0.5);                          
+                        }
+                    }
+                }
+                
+            }
+            .right{
+                width: 198px;
+                height: 140px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background: black;
+                border-radius: 0 8px 8px 0;
+                padding: 32px;
+                &__total{
+                    font-weight: 500;
+                    font-size: 15px;
+                    color: rgba(255, 255, 255, 0.5);
+                    margin-bottom: 8px;
+                }
+                &__device{
+                    font-weight: 700;
+                    font-size: 18px;
+                    color: $whiteTxt;
+                }
+            }
+        }
+    }
+    button{
+        width: 444px;
+        height: 48px;
+        background: $color1;
+        margin: 46px 0;
+        color: $whiteTxt;
+        font-weight: 700;
+        font-size: 13px;
+        text-align: center;
+        letter-spacing: 1px;        
+        border: none;
+        cursor: pointer;
+        &:hover{
+            background-color: $color1Hover;
+        }
+    }
+}
+

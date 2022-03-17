@@ -21,7 +21,7 @@ const MainYx1 = () => {
       setNumber(number + 1)
     )
   }
-
+    
   return(
     <main className="articleContainer">
       <div className="articleLink">
@@ -132,7 +132,6 @@ const MainYx1 = () => {
                   stroke="#D87D4A"
                   strokeWidth="2"
                   fill="none"
-                  fillRule="evenodd"
                 />
               </svg>
             </div>
@@ -151,7 +150,6 @@ const MainYx1 = () => {
                   stroke="#D87D4A"
                   strokeWidth="2"
                   fill="none"
-                  fillRule="evenodd"
                 />
               </svg>
             </div>
@@ -170,7 +168,6 @@ const MainYx1 = () => {
                   stroke="#D87D4A"
                   strokeWidth="2"
                   fill="none"
-                  fillRule="evenodd"
                 />
               </svg>
             </div>

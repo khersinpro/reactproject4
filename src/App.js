@@ -11,14 +11,17 @@ import Zx9 from './components/SpeakersPages/zx9Speaker/Zx9';
 import Zx7 from './components/SpeakersPages/zx7Speaker/Zx7';
 import Yx1 from './components/EarphonesPages/Yx1Hearphone/Yx1';
 import CheckOut from './components/CheckOut';
+import ScrollToTop from './components/SpeakersPages/ScrollToTop';
 import { CartContext, Count } from './CartContext';
 import './styles/main.scss';
+import CheckOutModal from './components/CheckOutModal';
 
 function App() {
   const category = ["HEADPHONES", "SPEAKERS", "EARPHONES"]
   const [burger, setBurger] = useState(false)
   const [cart, setCart] = useState(false)
   const [testContext, setTestContext] = useState([])
+  const [confirm, setConfirm] = useState(false)
   
   useEffect(() => {
     if(!localStorage.getItem("cart")){
@@ -36,12 +39,15 @@ function App() {
     setCart(!cart)
   }
 
+  const confirmChecker = () => {
+    setConfirm(!confirm)
+  }
   const openBurger = (e) => {
     setBurger(!burger)
   }
 
   const addToCart = (nom, number, price , device , img) =>{
-    let contextValue = testContext.map((element, idx) => (
+    let contextValue = testContext.map(element => (
       element.name === nom ? {...element, number: element.number + number} : element
     ) )
 
@@ -63,7 +69,8 @@ function App() {
   return (
     <Fragment>
         <BrowserRouter>
-      <CartContext.Provider value={{testContext, setTestContext, cart, openCart, addToCart}}>
+        <ScrollToTop>
+      <CartContext.Provider value={{testContext, setTestContext, cart, openCart, addToCart, confirm, confirmChecker }}>
           <Routes>
             <Route path="/reactproject4/" 
               element={<Home 
@@ -146,6 +153,7 @@ function App() {
 //**************END EARPHONES ARTICLES *****************************// 
           </Routes>
               </CartContext.Provider>
+              </ScrollToTop>
         </BrowserRouter>
     </Fragment>
   );

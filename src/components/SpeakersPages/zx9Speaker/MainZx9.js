@@ -144,7 +144,6 @@ const MainZx9 = () => {
                   stroke="#D87D4A"
                   strokeWidth="2"
                   fill="none"
-                  filleRule="evenodd"
                 />
               </svg>
             </div>
@@ -163,7 +162,6 @@ const MainZx9 = () => {
                   stroke="#D87D4A"
                   strokeWidth="2"
                   fill="none"
-                  filleRule="evenodd"
                 />
               </svg>
             </div>
@@ -182,7 +180,6 @@ const MainZx9 = () => {
                   stroke="#D87D4A"
                   strokeWidth="2"
                   fill="none"
-                  filleRule="evenodd"
                 />
               </svg>
             </div>

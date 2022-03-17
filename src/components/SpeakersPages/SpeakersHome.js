@@ -56,7 +56,6 @@ const SpeakersHome = () => {
                   stroke="#D87D4A"
                   strokeWidth="2"
                   fill="none"
-                  filleRule="evenodd"
                 />
               </svg>
             </div>
@@ -74,8 +73,7 @@ const SpeakersHome = () => {
                   d="M1.322 1l5 5-5 5"
                   stroke="#D87D4A"
                   strokeWidth="2"
-                  fill="none"
-                  filleRule="evenodd"
+                  fill="none" 
                 />
               </svg>
             </div>
@@ -94,7 +92,6 @@ const SpeakersHome = () => {
                   stroke="#D87D4A"
                   strokeWidth="2"
                   fill="none"
-                  filleRule="evenodd"
                 />
               </svg>
             </div>

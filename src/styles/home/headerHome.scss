@@ -472,10 +472,12 @@ nav{
     }
 }
 .bgLink{
+    display: none;
     @media(max-width: 830px) {
         inset: 0 0 0 0;
         background-color: rgba(0, 0, 0, 0.486);
         position: fixed;
         z-index: 2;
+        display: block;
     }
 }
