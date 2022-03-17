@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import earphones from "../../images/shared/desktop/image-category-thumbnail-earphones.png";
 import speakers from "../../images/shared/desktop/image-category-thumbnail-speakers.png";
 import headphones from "../../images/shared/desktop/image-category-thumbnail-headphones.png";
-import HeadphonesMain from "../HeadphonesPages/HeadphonesMain";
+
 
 const SpeakersHome = () => {
   return (

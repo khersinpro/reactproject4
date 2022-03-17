@@ -11,7 +11,7 @@ import { CartContext } from "../../CartContext";
 
 const HomeNav = ({ openBurger, burger }) => {
 
-  const { openCart} = useContext(CartContext);
+  const { openCart, testContext} = useContext(CartContext);
 
   return (
       <header className="homeNav">
@@ -97,7 +97,10 @@ const HomeNav = ({ openBurger, burger }) => {
               </Link>
             </div>
           </div>
-          <img className="cart" src={cart} alt="cart" onClick={!burger ? openCart : openBurger} />
+          <div className='cartContainer'>
+             {testContext.length > 0 && <p>{testContext.length}</p>}
+             <img className='cart' src={cart} alt="cart"  onClick={!burger ? openCart : openBurger}/>
+            </div>
         </nav>
         <div className="presentationHeader">
           <p className="firstTxt">NEW PRODUCT</p>

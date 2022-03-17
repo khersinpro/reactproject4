@@ -1,9 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../images/shared/desktop/logo.svg'
-import facebook from '../../images/shared/desktop/icon-facebook.svg'
-import instagram from '../../images/shared/desktop/icon-instagram.svg'
-import twitter from '../../images/shared/desktop/icon-twitter.svg'
 
 const Footer = () => {
   return (

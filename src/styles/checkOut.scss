@@ -399,6 +399,11 @@
         padding: 45px;
         position: absolute;
         z-index: 100;
+        @media(max-width: 730px) {
+            width: 327px;
+            height: 600px;
+            padding: 32px;
+        }
         &--check{
             border-radius: 50%;
             background-color: $color1;
@@ -416,21 +421,40 @@
             height: 72px;
             letter-spacing: 1.14286px;
             margin: 33px 0 24px;
+            @media(max-width: 730px) {
+                font-size: 24px;
+                line-height: 28px;
+                letter-spacing: 0.857143px;   
+                margin: 23px 0 16px;         
+            }
         }
         &--txt2{ 
             margin-bottom: 33px;
             font-weight: 500;
             font-size: 15px;
             color: rgba(0, 0, 0, 0.5);
+            @media(max-width: 730px) {
+                margin-bottom: 24px;
+            }            
         }
         &--container{
             width: 444px ;
             height: 140px;
             display: flex;
+            @media(max-width: 730px) {
+                flex-direction: column;
+                margin-bottom: 24px;
+                width: 100%;
+                height: auto;
+            }
             .left{
                 width: 246px ;
                 height: 100%;
                 display: flex;
+                @media(max-width: 730px) {
+                    width: 263px;
+                    height: 140px;
+                }
                 .leftContainer{
                     display: flex;
                     flex-direction: column;
@@ -439,6 +463,11 @@
                     padding: 24px;
                     background: $color3;
                     border-radius: 8px 0px 0px 8px;
+                    @media(max-width: 730px) {
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 8px 8px 0 0;
+                    }
                     .top{
                         width: 198px;
                         display: flex;
@@ -493,6 +522,11 @@
                 background: black;
                 border-radius: 0 8px 8px 0;
                 padding: 32px;
+                @media(max-width: 730px) {
+                    width: 263px;
+                    height: 92px;
+                    border-radius: 0 0 8px 8px;
+                }
                 &__total{
                     font-weight: 500;
                     font-size: 15px;
@@ -519,6 +553,10 @@
         letter-spacing: 1px;        
         border: none;
         cursor: pointer;
+        @media(max-width: 730px) {
+         width: 263px;   
+         margin: 0;
+        }
         &:hover{
             background-color: $color1Hover;
         }

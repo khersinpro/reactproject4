@@ -94,7 +94,6 @@ nav{
     .cart{
         width: 23.33px;
         height: 20px;
-        margin-left: 119.5px;
         &:hover{
             cursor: pointer;
         }
@@ -479,5 +478,25 @@ nav{
         position: fixed;
         z-index: 2;
         display: block;
+    }
+}
+.cartContainer{
+    position: relative;
+    margin-left: 119.5px;
+    p{
+        position: absolute;
+        color: white;
+        font-weight: 700;
+        background-color: red;
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        font-size: 10px;
+        text-align: center;
+        line-height: 15px;
+        top: -8px;
+        left: 32%;
+        z-index: 6;
+        pointer-events: none;
     }
 }

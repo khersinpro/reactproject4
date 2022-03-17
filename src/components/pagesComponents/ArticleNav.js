@@ -10,7 +10,7 @@ import headphones from '../../images/shared/desktop/image-category-thumbnail-hea
 import { CartContext } from '../../CartContext'
 
 const ArticleNav = ({openBurger, burger}) => {
-    const {openCart} = useContext(CartContext)
+    const {openCart, testContext} = useContext(CartContext)
   return (
     <header className='articleNav'>
         <CartModal />
@@ -64,7 +64,10 @@ const ArticleNav = ({openBurger, burger}) => {
                     </Link>
                 </div>
             </div>
-            <img className='cart' src={cart} alt="cart"  onClick={!burger ? openCart : openBurger}/>
+            <div className='cartContainer'>
+             {testContext.length > 0 && <p>{testContext.length}</p>}
+             <img className='cart' src={cart} alt="cart"  onClick={!burger ? openCart : openBurger}/>
+            </div>
         </nav>
     </header>
   )

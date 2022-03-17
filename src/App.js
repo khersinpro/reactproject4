@@ -12,9 +12,10 @@ import Zx7 from './components/SpeakersPages/zx7Speaker/Zx7';
 import Yx1 from './components/EarphonesPages/Yx1Hearphone/Yx1';
 import CheckOut from './components/CheckOut';
 import ScrollToTop from './components/SpeakersPages/ScrollToTop';
-import { CartContext, Count } from './CartContext';
+import Error from './components/Error';
+import { CartContext} from './CartContext';
 import './styles/main.scss';
-import CheckOutModal from './components/CheckOutModal';
+
 
 function App() {
   const category = ["HEADPHONES", "SPEAKERS", "EARPHONES"]
@@ -151,6 +152,13 @@ function App() {
               burger={burger}
               />} />           
 //**************END EARPHONES ARTICLES *****************************// 
+            <Route path='/*' element={<Error
+                openBurger={openBurger} 
+                burger={burger} 
+                cart={cart}
+                openCart={openCart} 
+             />} />
+            
           </Routes>
               </CartContext.Provider>
               </ScrollToTop>

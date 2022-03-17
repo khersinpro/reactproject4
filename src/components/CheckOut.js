@@ -1,4 +1,4 @@
-import React,{Fragment, useState, useContext, useEffect} from 'react'
+import React,{Fragment, useState, useContext} from 'react'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../CartContext'
 import CheckOutModal from './CheckOutModal'
@@ -11,14 +11,41 @@ const CheckOut = ({openBurger, burger}) => {
     const [nameCtrl, setNameCtrl] = useState(true)
     const [emailCtrl, setEmailCtrl] = useState(true)
     const {testContext, confirm, confirmChecker} = useContext(CartContext)
-
+    const [email, setemail] = useState(null)
+    const [adress, setadress] = useState(null)
+    const [phone, setphone] = useState(null)
+    const [name, setname] = useState(null)
+    const [eMoney, seteMoney] = useState(null)
+    const [eMoneyPin, seteMoneyPin] = useState(null)
     let vat = 0
     let pricing  = 0
     let shipping = 50
 
+
     const openCheckTop = () => {
-        window.scrollTo(0, 0);
-        confirmChecker()
+        if(email && adress && phone && name && eMoney && eMoneyPin ){
+                window.scrollTo(0, 0);
+                confirmChecker()
+                setemail(null)
+                setadress(null)
+                setphone(null) 
+                setname(null) 
+                seteMoney(null)
+                seteMoneyPin(null)
+        }else if(email && adress && phone && name && radiobtn === "cash" ){
+            window.scrollTo(0, 0);
+            confirmChecker()
+            setemail(null)
+            setadress (null)
+            setphone(null) 
+            setname(null) 
+            seteMoney(null)
+            seteMoneyPin(null)
+        }else{
+            alert("Incompletes Values")
+        }
+        
+
     }
 
     const changeRadio = (e) => {
@@ -37,6 +64,7 @@ const CheckOut = ({openBurger, burger}) => {
             case "email":
                 if(e.target.value.length > 3 && e.target.value.match(/^[\w._-]+@[\w-]+\.[a-z]{2,4}$/i)){
                     setEmailCtrl(true)
+                    setemail(e.target.value)
                 }else if(e.target.value.length > 3){
                     setEmailCtrl(false)
                 }else{
@@ -46,11 +74,34 @@ const CheckOut = ({openBurger, burger}) => {
             case "name":
                 if(e.target.value.length > 3 && e.target.value.match(/^[ a-zA-Z\-\']+$/)){
                     setNameCtrl(true)                   
+                    setname(e.target.value)
                 }else if(e.target.value.length > 3 && !e.target.value.match(/^[ a-zA-Z\-\']+$/)){
                     setNameCtrl(false)
                 }else{
                     setNameCtrl(true)
                 }
+                break
+            case "phone":
+                if(e.target.value.length > 6 && e.target.value.match(/^[0-9]/)){
+                    setphone(e.target.value) 
+                }
+                break
+            case "adress":
+                if(e.target.value.length > 5 ){
+                    setadress(e.target.value)
+                }
+                break
+            case "emoney":
+                if(e.target.value.length > 3 && e.target.value.match(/^[0-9]/) ){
+                    seteMoney(e.target.value)
+                }
+                break
+            case "pin":
+                if(e.target.value.length > 3 && e.target.value.match(/^[0-9]/)){
+                    seteMoneyPin(e.target.value)
+                }
+                break
+            default:
                 break
         }
     }
@@ -78,7 +129,7 @@ const CheckOut = ({openBurger, burger}) => {
                     </div>
                     <div className='inputContainer'>
                         <p>Phone number</p>
-                        <input type='text'  />
+                        <input type='text' id='phone' onChange={formChecker} />
                     </div>
                 </div>
 
@@ -86,7 +137,7 @@ const CheckOut = ({openBurger, burger}) => {
                     <p className="containerTitle">SHIPPING INFO</p>
                     <div className='checkOutLeft__shipping--first'>
                         <p>Adress</p>
-                        <input type="text" />
+                        <input type="text" id='adress' onChange={formChecker} />
                     </div>
                     <div className='checkOutLeft__shipping--scd'>
                         <div className='inputContainer'>
@@ -135,11 +186,11 @@ const CheckOut = ({openBurger, burger}) => {
                            <Fragment>
                                 <div className='inputContainer'>
                                     <p>e-Money Number</p>
-                                    <input type='text'  />
+                                    <input type='text' id='emoney' onChange={formChecker}  />
                                 </div>
                                 <div className='inputContainer'>
                                     <p>e-Money PIN</p>
-                                    <input type='text'  />
+                                    <input type='text' id='pin' onChange={formChecker}  />
                                 </div>
                            </Fragment>
                        ) 

@@ -1,5 +1,5 @@
-import React, {useContext, Fragment, useEffect} from 'react'
-import { useNavigate, Link} from 'react-router-dom'
+import React, {useContext, Fragment} from 'react'
+import { useNavigate} from 'react-router-dom'
 import { CartContext } from '../CartContext'
 
 const CheckOutModal = () => {
